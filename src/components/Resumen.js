@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled';
 import { primeraMayuscula } from '../Helper'
+import PropTypes from 'prop-types'
 
 const ContenedorCotizacion = styled.div`
     display: flex;
@@ -45,5 +46,10 @@ const Resumen = ({cotizacion, datos, titulo}) => {
         </ContenedorCotizacion>
      );
 }
- 
+
+Resumen.propTypes = {
+    cotizacion: PropTypes.number.isRequired,
+    datos: PropTypes.object.isRequired,
+    titulo: PropTypes.string.isRequired
+}
 export default Resumen;

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import styled from '@emotion/styled';
 import {aumentoPlan, aumentoMarca, diferenciaYear} from '../Helper'
+import PropTypes from 'prop-types'
 
 const Div = styled.div`
     display:flex;
@@ -179,6 +180,11 @@ const Formulario = ({setResumen, setSpinner}) => {
 
         </form>
      );
+}
+
+Formulario.propTypes = {
+    setResumen: PropTypes.func.isRequired,
+    setSpinner: PropTypes.func.isRequired
 }
  
 export default Formulario;
